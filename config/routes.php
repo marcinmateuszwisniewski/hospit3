@@ -45,7 +45,12 @@ Router::defaultRouteClass(DashedRoute::class);
 
 Router::scope('/academicteachers',['controller' => 'AcademicTeachers'],function($routes)
 {
-    $routes->connect('/suggestLowNote',['action' => 'lowNote']);
+    $routes->connect('/suggestlownote',['action' => 'lowNote']);
+});
+
+Router::scope('/academicteachers',['controller' => 'AcademicTeachers'],function($routes)
+{
+    $routes->connect('/suggestunevaluated',['action' => 'necessaryEval']);
 });
 
 Router::scope('/', function (RouteBuilder $routes) {
