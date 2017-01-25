@@ -110,4 +110,20 @@ class AcademicTeachersController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+    
+    public function lowNote(){
+        // Use the BookmarksTable to find tagged bookmarks.
+$this->paginate = [
+    'finder' => [
+        'lowNotes' => []
+    ]
+];
+    $academicTeachers = $this->paginate($this->AcademicTeachers);
+    $this->set(compact('academicTeachers'));
+        
+    }
+    
+    
+    public function necessaryEval(){}
+    
 }

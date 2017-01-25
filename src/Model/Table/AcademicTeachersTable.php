@@ -79,4 +79,19 @@ class AcademicTeachersTable extends Table
 
         return $validator;
     }
+    
+    // The $query argument is a query builder instance.
+// The $options array will contain the 'tags' option we passed
+// to find('tagged') in our controller action.
+public function findLowNotes(Query $query, array $options)
+{
+return $this->find()
+->distinct(['AcademicTeachers.id'])
+->matching('Evaluations', function ($q) {
+    
+    return $q->where(['Evaluations.final_note' < 3]);
+});
+}
+    
+    
 }

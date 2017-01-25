@@ -43,12 +43,12 @@ use Cake\Routing\Route\DashedRoute;
  */
 Router::defaultRouteClass(DashedRoute::class);
 
-Router::scope('/academicteachers',['controller' => 'AcademicTeachers'],function($routes)
+Router::scope('/academic-teachers',['controller' => 'AcademicTeachers'],function($routes)
 {
     $routes->connect('/suggestlownote',['action' => 'lowNote']);
 });
 
-Router::scope('/academicteachers',['controller' => 'AcademicTeachers'],function($routes)
+Router::scope('/academic-teachers',['controller' => 'AcademicTeachers'],function($routes)
 {
     $routes->connect('/suggestunevaluated',['action' => 'necessaryEval']);
 });
