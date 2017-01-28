@@ -41,6 +41,8 @@ class EvaluationsTable extends Table
             'targetForeignKey' => 'academic_teacher_id',
             'joinTable' => 'academic_teachers_evaluations'
         ]);
+        
+
     }
 
     /**

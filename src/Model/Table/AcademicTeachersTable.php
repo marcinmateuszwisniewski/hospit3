@@ -89,7 +89,7 @@ return $this->find()
 ->distinct(['AcademicTeachers.id'])
 ->matching('Evaluations', function ($q) {
     
-    return $q->where(['Evaluations.final_note' < 3]);
+    return $q->where(['Evaluations.final_note <' => 3]);
 });
 }
     
